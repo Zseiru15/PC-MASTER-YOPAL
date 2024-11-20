@@ -1,0 +1,307 @@
+/* ======== RESET Y ESTILOS GENERALES ======== */
+/* Eliminación de márgenes y rellenos predeterminados, ajuste del box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ajustes generales para el cuerpo de la página */
+body {
+    min-height: 100vh; /* Altura mínima de la página para ocupar toda la ventana */
+    background-color: #ffffff; /* Color de fondo blanco */
+    line-height: 1.6; /* Espaciado entre líneas */
+    font-family: 'Montserrat', sans-serif; /* Fuente general de la página */
+}
+
+/* ======== NAVEGACIÓN (HEADER) ======== */
+/* Contenedor del menú de navegación */
+.nav-container {
+    background-color: #e27f00; /* Fondo color naranja */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-between; /* Distribuye el espacio entre elementos */
+    align-items: center; /* Alineación vertical centrada */
+    padding: 0 2rem; /* Espaciado horizontal a izquierda y derecha */
+}
+
+/* Estilo del logo */
+.logo {
+    width: 60px; /* Ancho del logo */
+    height: 60px; /* Alto del logo */
+    border-radius: 50%; /* Borde redondeado en forma de círculo */
+    object-fit: cover; /* Ajuste del contenido para llenar el contenedor */
+}
+
+/* Título en la barra de navegación */
+.title {
+    color: #000000; /* Color de texto negro */
+    font-size: 2rem; /* Tamaño de la fuente grande */
+    font-weight: 100; /* Fuente ligera */
+}
+
+/* Contenedor de enlaces de navegación */
+.nav-links {
+    display: flex; /* Flexbox para los enlaces */
+    gap: 1.5rem; /* Espacio entre los enlaces */
+}
+
+/* Estilo general de los enlaces */
+.nav-links a {
+    color: #000000; /* Color de texto negro */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1rem; /* Tamaño estándar de fuente */
+    transition: color 0.3s ease; /* Transición suave del color al pasar el ratón */
+}
+
+/* Efecto hover para los enlaces */
+.nav-links a:hover {
+    color: #ffa800; /* Cambio a color naranja claro al pasar el ratón */
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+/* Contenedor principal del contenido */
+.main-content {
+    max-width: 1200px; /* Ancho máximo para la sección principal */
+    margin: 2rem auto; /* Centrado en la página con márgenes superiores e inferiores */
+    display: grid; /* Grid layout para organizar el contenido */
+    grid-template-columns: 1fr; /* Una columna en dispositivos pequeños */
+    gap: 2rem; /* Espacio entre los elementos */
+    padding: 0 2rem; /* Relleno a izquierda y derecha */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    padding: 2rem; /* Espaciado interno */
+    display: flex; /* Flexbox para organizar el contenido */
+    justify-content: center; /* Centrado horizontal */
+    flex-direction: column; /* Dirección en columna */
+    text-align: center; /* Texto centrado */
+}
+
+/* Contenedor de texto de bienvenida */
+.welcome-text {
+    display: flex; /* Flexbox para organizar el contenido */
+    flex-direction: column; /* Dirección en columna */
+    gap: 2rem; /* Espacio entre elementos */
+}
+
+/* ======== TEXTOS GENERALES ======== */
+/* Estilo del título principal */
+.Tittle1-tex {
+    font-size: 2rem; /* Tamaño grande del título */
+    font-weight: bold; /* Negrita */
+    color: #000000; /* Color negro */
+    text-align: center; /* Texto centrado */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+/* Estilos generales para textos */
+.Text1,
+.Text2 {
+    font-size: 1rem; /* Tamaño estándar de fuente */
+    color: #000000; /* Color negro */
+    text-align: center; /* Texto centrado */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+/* ======== GALERÍA DE IMÁGENES ======== */
+/* Contenedor para la galería de imágenes */
+.contact-box {
+    background: #ffffff; /* Fondo blanco */
+    padding: 1rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex; /* Flexbox para organizar contenido */
+    justify-content: space-between; /* Espacio uniforme entre elementos */
+    align-items: center; /* Alineación vertical centrada */
+    margin-top: 1.5rem; /* Margen superior */
+    flex-direction: column; /* Dirección en columna */
+    position: relative; /* Posicionamiento relativo */
+    max-width: 100%; /* Ancho máximo */
+    margin: auto; /* Centrado horizontal */
+    overflow: hidden; /* Oculta el desbordamiento del contenido */
+}
+
+/* Contenedor de la galería de imágenes */
+.image-gallery {
+    display: flex; /* Flexbox para organizar imágenes */
+    justify-content: space-around; /* Espacio uniforme entre imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias filas */
+    gap: 20px; /* Espacio entre imágenes */
+}
+
+/* Contenedor de cada imagen en la galería */
+.image-box {
+    display: flex; /* Flexbox para organizar contenido */
+    flex-direction: column; /* Dirección en columna */
+    align-items: center; /* Centrado vertical */
+    margin: 10px; /* Margen externo */
+    text-align: center; /* Texto centrado */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para transformaciones */
+    min-width: 90%; /* Ancho mínimo */
+    background-repeat: no-repeat; /* Evita la repetición de fondo */
+}
+
+/* Estilos para imágenes en la galería */
+.image-gallery img {
+    width: 100%; /* Ancho completo */
+    height: 200px; /* Alto fijo */
+    object-fit: cover; /* Ajuste para llenar el contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Suaviza la transformación al pasar el ratón */
+}
+
+/* Efecto hover en imágenes */
+.image-gallery img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+}
+
+/* Botón genérico para la web */
+.web-button {
+    background: #d9d9d9; /* Fondo gris claro */
+    padding: 0.8rem 1.5rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Color del texto gris oscuro */
+    font-weight: bold; /* Negrita */
+    transition: background 0.3s ease, transform 0.3s ease; /* Transición de fondo y transformación */
+    display: inline-block; /* Elemento en línea con bloque */
+    margin-top: 10px; /* Margen superior */
+}
+
+/* Efecto hover para el botón */
+.web-button:hover {
+    color: black; /* Texto cambia a negro */
+    background: #ffa800; /* Fondo cambia a naranja */
+    transform: translateY(-2px); /* Levanta el botón ligeramente */
+}
+
+/* Elemento de una sola diapositiva del carrusel */
+.slider-item {
+    min-width: 90%; /* Ancho mínimo */
+    background-repeat: no-repeat; /* Evita repetición de fondo */
+}
+
+/* Clase para la diapositiva activa en el carrusel */
+.slider-item.active {
+    display: block; /* Se muestra en bloque */
+    background-repeat: no-repeat; /* Evita repetición de fondo */
+}
+
+/* Contenedor de texto y botones junto a imágenes */
+.text-and-button {
+    margin-left: 20px; /* Margen a la izquierda */
+    max-width: 50%; /* Ancho máximo */
+}
+
+/* Párrafo dentro del contenedor de texto */
+.text-and-button p {
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* ======== ESTILOS DEL CARRUSEL ======== */
+/* Contenedor del carrusel */
+.carrusel {
+    display: flex; /* Flexbox para organizar imágenes */
+    overflow: hidden; /* Oculta contenido desbordado */
+    width: 300px; /* Ancho fijo del carrusel */
+}
+
+/* Contenedor general del carrusel */
+.slider-wrapper {
+    display: flex; /* Flexbox para organizar diapositivas */
+    transition: transform 0.5s ease; /* Suave transición de movimiento */
+    width: calc(100% * 3); /* Ancho ajustado para mostrar 3 imágenes a la vez */
+}
+
+/* Cada imagen ocupa un tercio del carrusel visible */
+.image-box {
+    border-radius: 8px; /* Bordes redondeados */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto fijo */
+    padding: 0.5rem 0.5rem; /* Espaciado interno */
+    background-color: #777777;
+    min-width: calc(100% / 3); /* Ancho ajustado para tres imágenes */
+    display: flex; /* Flexbox para organizar contenido */
+    flex-direction: column; /* Dirección en columna */
+    align-items: center; /* Centrado vertical */
+    transition: transform 0.3s ease; /* Suaviza transformación */
+    text-align: center; /* Texto centrado */
+}
+
+/* Botones de navegación del carrusel */
+button.prev-button,
+button.next-button {
+    position: absolute; /* Posición fija dentro del carrusel */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste para centrar botones */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #ffffff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero */
+    padding: 10px; /* Espaciado interno */
+    z-index: 10; /* Colocado sobre el contenido del carrusel */
+}
+
+/* Botón de navegación hacia la izquierda */
+button.prev-button {
+    left: 0; /* Posición a la izquierda */
+}
+
+/* Botón de navegación hacia la derecha */
+button.next-button {
+    right: 0; /* Posición a la derecha */
+}
+
+/* ======== PIE DE PÁGINA (FOOTER) ======== */
+/* Contenedor principal del pie de página */
+.main-footer {
+    background-color: #e27f00; /* Fondo color naranja */
+    color: #000000; /* Color de texto negro */
+    padding: 2rem 0; /* Espaciado superior e inferior */
+    margin-top: auto; /* Márgen superior automático para empujar hacia abajo */
+    text-align: center; /* Texto centrado */
+    border-top: 1px solid #e6e6e6; /* Línea superior */
+}
+
+/* Contenedor del contenido del pie de página */
+.footer-content {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    display: grid; /* Grid layout */
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas */
+    gap: 2rem; /* Espacio entre columnas */
+    padding: 0 2rem; /* Espaciado lateral */
+}
+
+/* Enlaces de términos y condiciones */
+.terms {
+    color: #000000; /* Color de texto negro */
+}
+
+/* Información de contacto en el pie de página */
+.contact-info {
+    margin-top: 1rem; /* Margen superior */
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+    display: flex; /* Flexbox para organizar íconos */
+    justify-content: center; /* Centrado horizontal */
+    gap: 1.5rem; /* Espacio entre íconos */
+    margin: 1rem 0; /* Márgenes superior e inferior */
+}
+
+/* Estilo para los enlaces de íconos de redes sociales */
+.social-icons a {
+    color: #000000; /* Color negro */
+    font-size: 1.5rem; /* Tamaño del ícono */
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+/* Efecto hover para los íconos de redes sociales */
+.social-icons a:hover {
+    color: #B6BAC3; /* Cambio a color gris claro al pasar el ratón */
+}
